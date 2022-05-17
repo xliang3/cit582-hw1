@@ -12,8 +12,8 @@ def encrypt(key,plaintext):
             ciphertext += chr(temp + ord('A'))
         else:
             ciphertext += letter
-    print(plaintext)
-    print(ciphertext)
+    # print(plaintext)
+    # print(ciphertext)
     return ciphertext
 
 def decrypt(key,ciphertext):
@@ -29,8 +29,8 @@ def decrypt(key,ciphertext):
             plaintext += chr(temp + ord('A'))
         else:
             plaintext += letter
-    print(ciphertext)
-    print(plaintext)
+    # print(ciphertext)
+    # print(plaintext)
     return plaintext
 
 
