@@ -17,7 +17,16 @@ def encrypt(key,plaintext):
 def decrypt(key,ciphertext):
     plaintext=""
     for letter in ciphertext:
-        plaintext += letter
+        if letter in 'abcdefghijklmnopqrstuvwxyz':
+            temp = ord(letter) - ord('a') - key + 26
+            temp %= 26
+            plaintext += chr(temp + ord('a'))
+        elif letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+            temp = ord(letter) - ord('A') - key + 26
+            temp %= 26
+            plaintext += chr(temp + chr('A'))
+        else:
+            plaintext += letter
     return plaintext
 
 
