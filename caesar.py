@@ -12,6 +12,7 @@ def encrypt(key,plaintext):
             ciphertext += chr(temp + chr('A'))
         else:
             ciphertext += letter
+    print(plaintext)
     return ciphertext
 
 def decrypt(key,ciphertext):
